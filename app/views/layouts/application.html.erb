@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%=current_user.email%>
+  <%unless current_user == nil%>
+    <%=current_user.email%>
+  <%end%>
 <%= yield %>
 
 </body>
