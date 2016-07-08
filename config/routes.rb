@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :fridges
   resources :families
   devise_for :users
-  resources :recaptcha
+  # resources :recaptcha
 
 
   root 'families#index'
