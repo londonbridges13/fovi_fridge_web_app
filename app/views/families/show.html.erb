@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<%@family.users.each do |u| %>
+  <%= u.email%>
+  <%= "_____|_____"%>
+  <%= u.id%>
+  <%= "_____|_____"%>
+  <%= u.family.title%>
+  <%= "_____|_____"%>
+  <%= u.family.id%>
+  <%= "_____|_____"%>
+  <%= u.family.fridge.id%>
+<%end%>
+
+<p>
+  <strong>Title:</strong>
+  <%= @family.title %>
+</p>
+
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %>

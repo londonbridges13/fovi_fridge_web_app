@@ -1,0 +1,7 @@
+<h1>New Family</h1>
+<%@family.users.each do |u| %>
+  <%= u.email%>
+<%end%>
+<%= render 'form' %>
+
+<%= link_to 'Back', families_path %>

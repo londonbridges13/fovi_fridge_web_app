@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+
+<%current_user.family.users.each do |u| %>
+  <%= u.email%>
+  <%= "_____|_____"%>
+  <%= u.id%>
+  <%= "_____|_____"%>
+  <%= u.family.title%>
+  <%= "_____|_____"%>
+  <%= u.family.id%>
+  <%= "_____|_____"%>
+  <%= u.family.fridge.id%>
+  <%= "_____|_____"%>
+    <% u.family.fridge.food_items.each do |f|%>
+      <%= "_____|_____"%>
+      <%= f.title%>
+      <%= "_____|_____"%>
+      <%= f.id%>
+    <%end%>
+
+
+<%end%>
+
+<p>
+  <strong>Title:</strong>
+  <%= @food_item.title %>
+</p>
+
+<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
+<%= link_to 'Back', food_items_path %>
