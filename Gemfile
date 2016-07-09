@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '~> 4.1', '>= 4.1.1'
 
+gem 'grape', '~> 0.14.0'
+gem 'grape-entity'
+
 # gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password

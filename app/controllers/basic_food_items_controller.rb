@@ -69,6 +69,6 @@ class BasicFoodItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def basic_food_item_params
-      params.require(:basic_food_item).permit(:title)
+      params.require(:basic_food_item).permit(:title, :categories, :is_basic, :fridge_amount, :shoppinglist_amount, :mylist_amount, :measurement_type, :full_amount, :current_amount, :usually_expires, :expiration_date, :modified_date)
     end
 end
