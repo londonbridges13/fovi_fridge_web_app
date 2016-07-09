@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :families
   devise_for :users
   # resources :recaptcha
+  mount API::Base => '/'
 
 
   root 'families#index'
