@@ -11,7 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707173430) do
+ActiveRecord::Schema.define(version: 20160709073455) do
+
+  create_table "basic_food_items", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.boolean  "is_basic"
+    t.integer  "fridge_amount"
+    t.integer  "shoppinglist_amount"
+    t.integer  "mylist_amount"
+    t.string   "measurement_type"
+    t.integer  "full_amount"
+    t.integer  "current_amount"
+    t.integer  "usually_expires"
+    t.datetime "expiration_date"
+    t.datetime "modified_date"
+    t.string   "categories",          default: "--- []\n"
+    t.integer  "calories"
+    t.float    "total_fat"
+    t.float    "saturated_fat"
+    t.float    "unsaturated_fat"
+    t.integer  "protien"
+    t.integer  "carbohydrate"
+    t.integer  "fiber"
+    t.string   "food_category"
+    t.float    "iron"
+    t.float    "vitamin_a"
+    t.float    "vitamin_b"
+    t.float    "vitamin_b6"
+    t.float    "vitamin_b12"
+    t.float    "vitamin_c"
+    t.float    "vitamin_d"
+    t.float    "vitamin_e"
+    t.float    "vitamin_k"
+    t.float    "potassium"
+    t.float    "sodium"
+    t.float    "niacin"
+    t.float    "folate"
+    t.float    "zinc"
+    t.float    "thiamin"
+    t.float    "riboflavin"
+    t.float    "calcium"
+    t.float    "magnesium"
+    t.float    "cholesterol"
+    t.float    "caffeine"
+    t.string   "five_recipes",        default: "--- []\n"
+    t.string   "diets",               default: "--- []\n"
+  end
 
   create_table "families", force: :cascade do |t|
     t.string   "title"
@@ -21,15 +68,43 @@ ActiveRecord::Schema.define(version: 20160707173430) do
 
   create_table "food_items", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.integer  "fridge_id"
+    t.boolean  "is_basic"
+    t.integer  "fridge_amount"
+    t.integer  "shoppinglist_amount"
+    t.integer  "mylist_amount"
+    t.string   "measurement_type"
+    t.integer  "full_amount"
+    t.integer  "current_amount"
+    t.integer  "usually_expires"
+    t.datetime "expiration_date"
+    t.datetime "modified_date"
+    t.string   "categories",          default: "--- []\n"
   end
 
   create_table "fridges", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "family_id"
+  end
+
+  create_table "suggested_food_items", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.boolean  "is_basic"
+    t.integer  "fridge_amount"
+    t.integer  "shoppinglist_amount"
+    t.integer  "mylist_amount"
+    t.string   "measurement_type"
+    t.integer  "full_amount"
+    t.integer  "current_amount"
+    t.integer  "usually_expires"
+    t.datetime "expiration_date"
+    t.datetime "modified_date"
+    t.string   "categories",          default: "--- []\n"
   end
 
   create_table "users", force: :cascade do |t|

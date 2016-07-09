@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :suggested_food_items
+  resources :basic_food_items
   resources :food_items
   resources :fridges
   resources :families
