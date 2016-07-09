@@ -27,7 +27,7 @@ class BasicFoodItemsController < ApplicationController
     @basic_food_item = BasicFoodItem.new(basic_food_item_params)
 
     respond_to do |format|
-      if @basic_food_item.save
+      if @basic_food_item.save && config.force_ssl == true
         format.html { redirect_to @basic_food_item, notice: 'Basic food item was successfully created.' }
         format.json { render :show, status: :created, location: @basic_food_item }
       else
@@ -41,7 +41,7 @@ class BasicFoodItemsController < ApplicationController
   # PATCH/PUT /basic_food_items/1.json
   def update
     respond_to do |format|
-      if @basic_food_item.update(basic_food_item_params)
+      if @basic_food_item.update(basic_food_item_params) && config.force_ssl == true
         format.html { redirect_to @basic_food_item, notice: 'Basic food item was successfully updated.' }
         format.json { render :show, status: :ok, location: @basic_food_item }
       else

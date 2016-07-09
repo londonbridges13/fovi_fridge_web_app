@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   resources :suggested_food_items
   resources :basic_food_items
-  resources :food_items
-  resources :fridges
-  resources :families
-  devise_for :users
+    # match '/fovi/soma_/sosa_' => 'basic_food_items#new'
+    # get '/fovi/soma_/sosa_/_addbasicfooditem', to: 'basic_food_items#new'
+    # get '/fovi/soma_/sosa_/_editbasicfooditem/:id', to: 'basic_food_items#edit'
+    # get '/fovi/soma_/sosa_/_allbasicfooditems', to: 'basic_food_items#index'
+
+  resources :food_items, only: [] # Until Version 2
+  resources :fridges, only: [] # Until Version 2
+  resources :families, only: [] # Until Version 2
+  devise_for :users, only: [] # Until Version 2
   # resources :recaptcha
   mount API::Base => '/'
 
