@@ -1,4 +1,6 @@
 class SuggestedFoodItemsController < ApplicationController
+  before_filter :authenticate_admin!, only: [:update, :edit, :index, :destroy, :show]
+  before_filter :authenticate_user!, only: [:create, :new]
   before_action :set_suggested_food_item, only: [:show, :edit, :update, :destroy]
 
   # GET /suggested_food_items
