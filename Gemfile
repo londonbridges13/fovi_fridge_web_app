@@ -26,7 +26,7 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 
 gem 'grape', '~> 0.14.0'
 gem 'grape-entity'
-
+gem 'rack-attack', '~> 4.4', '>= 4.4.1'
 # gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
