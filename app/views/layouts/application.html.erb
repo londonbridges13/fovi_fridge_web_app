@@ -10,6 +10,9 @@
   <%unless current_user == nil%>
     <%=current_user.email%>
   <%end%>
+  <%unless current_admin == nil%>
+    <%=current_admin.email%>
+  <%end%>
 <%= yield %>
 
 </body>
