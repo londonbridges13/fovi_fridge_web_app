@@ -1,6 +1,6 @@
 class BasicFoodItemsController < ApplicationController
   before_filter :authenticate_admin!, only: [:index, :show, :new, :create, :update, :edit, :destroy]
-  before_filter :authenticate_user!, only: [:index, :show]
+  before_filter :authenticate_user!, only: [:index, :show] #just basic_food_items don't need authentication
   before_action :set_basic_food_item, only: [:show, :edit, :update, :destroy]
 
   # GET /basic_food_items

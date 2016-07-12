@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :food_items, only: [] # Until Version 2
   resources :fridges, only: [] # Until Version 2
   resources :families, only: [] # Until Version 2
-  devise_for :users, only: [] # Until Version 2
+  devise_for :users#, only: [:registerable] # Until Version 2
   # resources :recaptcha
   mount API::Base => '/'
 
