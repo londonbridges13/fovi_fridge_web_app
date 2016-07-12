@@ -29,6 +29,8 @@ gem 'grape-entity'
 gem 'rack-attack', '~> 4.4', '>= 4.4.1'
 gem 'cancancan', '~> 1.10'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+
 # gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
