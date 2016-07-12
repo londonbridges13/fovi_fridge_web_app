@@ -57,7 +57,7 @@ class Rack::Attack
   end
 
   #Prevent Brute Force on Admin login
-  throttle('admins/ip', :limit => 5, :period => 20.minutes) do |req|
+  throttle('admins/ip', :limit => 5, :period => 20.seconds) do |req|
     # change /login to what the users /sign_in is, or change users /sign_in to /login
     if req.path == '/login' && req.post?
       req.ip
