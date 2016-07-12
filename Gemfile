@@ -27,6 +27,8 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'grape', '~> 0.14.0'
 gem 'grape-entity'
 gem 'rack-attack', '~> 4.4', '>= 4.4.1'
+gem 'cancancan', '~> 1.10'
+
 # gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
@@ -54,7 +56,11 @@ group :development do
 group :development do
     # Use sqlite3 as the database for Active Record
     gem 'sqlite3'
+end
 
+group :development do
+  gem 'rubocop', '~> 0.41.2', require: false
+  gem 'brakeman', :require => false
 end
 
   group :production do
