@@ -6,23 +6,23 @@
 </p>
 <p>
   <strong>Image:</strong>
-  <%= image_tag @basic_food_item.image.url(:thumb) %>
+  <%= image_tag @suggested_food_item.image.url(:thumb) %>
 </p>
 <p>
   <strong>Image URL:</strong>
-  <%=  @basic_food_item.image_url %>
+  <%=  @suggested_food_item.image_url %>
 </p>
 <p>
   <strong>Measurement Type:</strong>
-  <%= @basic_food_item.measurement_type %>
+  <%= @suggested_food_item.measurement_type %>
 </p>
 <p>
   <strong>Full Amount:</strong>
-  <%= @basic_food_item.full_amount %>
+  <%= @suggested_food_item.full_amount %>
 </p>
 <p>
   <strong>Usually Expires:</strong>
-  <%= @basic_food_item.usually_expires %>
+  <%= @suggested_food_item.usually_expires %>
 </p>
 
 <%= link_to 'Edit', edit_suggested_food_item_path(@suggested_food_item) %> |
