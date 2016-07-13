@@ -25,3 +25,7 @@
 </table>
 
 <br>
+
+<%unless current_admin == nil%>
+  <%= link_to 'New Basic Food Item', new_basic_food_item_path %>
+<%end%>

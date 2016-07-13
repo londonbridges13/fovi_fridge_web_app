@@ -1,12 +1,12 @@
 class BasicFoodItem < ActiveRecord::Base
   has_attached_file :image, styles: { medium: "200x200>", thumb: "90x90>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-
-  # before_save :add_image_url
+  validates_presence_of :title
+  before_save :set_is_basic
 
   protected
 
-  # def add_image_url
-  #   self.image_url = URI(request.url) + basic_food_item.image.url(:thumb), notice("Saved Image Url")
-  # end
+  def set_is_basic
+    self.is_basic = true
+  end
 end
