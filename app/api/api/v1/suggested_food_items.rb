@@ -3,7 +3,11 @@ module API
     class SuggestedFoodItems < Grape::API
       format :json
       resource :suggested_food_items do
+        format :json
         desc 'Add SuggestedFoodItems to Fovi Database'
+        get do
+          present SuggestedFoodItem.all, with: Entity::V1::SuggestedFoodItemsEntity
+        end
         post do
           SuggestedFoodItem.create!({
                          title: params[:title],
@@ -18,7 +22,7 @@ module API
                         #  expiration_date: params[:expiration_date],
                         #  modified_date: params[:modified_date],
                          categories: params[:categories]
-                     })
+                     }), with: Entity::V1::SuggestedFoodItemsEntity
         end
       end
     end
