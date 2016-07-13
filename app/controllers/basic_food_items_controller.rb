@@ -78,7 +78,9 @@ class BasicFoodItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def basic_food_item_params
-      params.require(:basic_food_item).permit(:title, :image, :categories, :is_basic, :fridge_amount, :shoppinglist_amount, :mylist_amount, :measurement_type, :full_amount, :current_amount, :usually_expires, :expiration_date, :modified_date, :calories, :total_fat, :saturated_fat, :unsaturated_fat, :protien, :carbohydrate, :fiber, :food_category, :iron, :vitamin_a, :vitamin_b,
-       :vitamin_b6, :vitamin_b12, :vitamin_c, :vitamin_d,  :vitamin_e, :vitamin_k, :potassium, :sodium, :niacin, :folate, :zinc, :thiamin, :riboflavin, :calcium, :magnesium, :cholesterol, :caffeine, :five_recipes, :diets, :image_url )
+      params.require(:basic_food_item).permit(:title, :image, :categories, :is_basic, :fridge_amount, :shoppinglist_amount, :mylist_amount, :measurement_type, :full_amount,
+      :current_amount, :usually_expires, :expiration_date, :modified_date, :calories, :total_fat, :saturated_fat, :unsaturated_fat, :protien, :carbohydrate, :fiber,
+      :food_category, :iron, :vitamin_a, :vitamin_b, :vitamin_b6, :vitamin_b12, :vitamin_c, :vitamin_d,  :vitamin_e, :vitamin_k, :potassium, :sodium, :niacin, :folate,
+       :zinc, :thiamin, :riboflavin, :calcium, :magnesium, :cholesterol, :caffeine, :five_recipes, :diets, :image_url, :food_desc )
     end
 end

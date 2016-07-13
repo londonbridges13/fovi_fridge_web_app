@@ -5,6 +5,10 @@
   <%= @basic_food_item.title %>
 </p>
 <p>
+  <strong>Description:</strong>
+  <%= @basic_food_item.food_desc %>
+</p>
+<p>
   <strong>Image:</strong>
   <%= image_tag @basic_food_item.image.url(:thumb) %>
 </p>
