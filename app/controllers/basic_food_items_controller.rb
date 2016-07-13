@@ -16,7 +16,9 @@ class BasicFoodItemsController < ApplicationController
 
   # GET /basic_food_items/new
   def new
-    @basic_food_item = BasicFoodItem.new
+    unless current_user == nil
+      @basic_food_item = BasicFoodItem.new
+    end
   end
 
   # GET /basic_food_items/1/edit
