@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713072026) do
+ActiveRecord::Schema.define(version: 20160713180913) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20160713072026) do
 
   create_table "basic_food_items", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
     t.boolean  "is_basic"
     t.integer  "fridge_amount"
     t.integer  "shoppinglist_amount"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20160713072026) do
     t.integer  "usually_expires"
     t.datetime "expiration_date"
     t.datetime "modified_date"
-    t.string   "categories",          default: "--- []\n"
+    t.string   "categories",             default: "--- []\n"
     t.integer  "calories"
     t.float    "total_fat"
     t.float    "saturated_fat"
@@ -77,14 +77,15 @@ ActiveRecord::Schema.define(version: 20160713072026) do
     t.float    "magnesium"
     t.float    "cholesterol"
     t.float    "caffeine"
-    t.string   "five_recipes",        default: "--- []\n"
-    t.string   "diets",               default: "--- []\n"
+    t.string   "five_recipes",           default: "--- []\n"
+    t.string   "diets",                  default: "--- []\n"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image_url"
     t.string   "food_desc"
+    t.integer  "fridge_usually_expires"
   end
 
   create_table "families", force: :cascade do |t|
