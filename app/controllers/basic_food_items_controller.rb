@@ -27,7 +27,7 @@ class BasicFoodItemsController < ApplicationController
   # POST /basic_food_items.json
   def create
     @basic_food_item = BasicFoodItem.new(basic_food_item_params)
-
+    @basic_food_item.image_url = URI(request.url) + basic_food_item.image.url(:thumb)
     respond_to do |format|
       if @basic_food_item.save && config.force_ssl == true
         format.html { redirect_to @basic_food_item, notice: 'Basic food item was successfully created.' }
@@ -43,6 +43,7 @@ class BasicFoodItemsController < ApplicationController
   # PATCH/PUT /basic_food_items/1.json
   def update
     respond_to do |format|
+      @basic_food_item.image_url = URI(request.url) + @basic_food_item.image.url(:thumb)
       if @basic_food_item.update(basic_food_item_params) && config.force_ssl == true
         format.html { redirect_to @basic_food_item, notice: 'Basic food item was successfully updated.' }
         format.json { render :show, status: :ok, location: @basic_food_item }
