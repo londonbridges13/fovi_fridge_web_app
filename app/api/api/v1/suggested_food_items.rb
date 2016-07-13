@@ -16,7 +16,7 @@ module API
                          usually_expires: params[:usually_expires],
                         #  expiration_date: params[:expiration_date],
                         #  modified_date: params[:modified_date],
-                         categories: params[:categories],
+                         categories: params[:categories]
                      })
         end
       end
