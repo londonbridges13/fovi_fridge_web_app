@@ -1,4 +1,5 @@
-<%= form_for(@basic_food_item) do |f| %>
+
+<%= simple_form_for @basic_food_item do |f| %>
   <% if @basic_food_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@basic_food_item.errors.count, "error") %> prohibited this basic_food_item from being saved:</h2>
@@ -12,10 +13,154 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.input :title %>
   </div>
+
+  <%unless @basic_food_item.image == nil%>
+    <%= image_tag @basic_food_item.image.url(:thumb) %>
+  <%end%>
+  <%= f.input :image, as: :file %>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :categories %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :fridge_amount %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :shoppinglist_amount %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :mylist_amount %>
+  </div>
+  <div class="field">
+    <%= f.input :measurement_type %>
+  </div>
+  <div class="field">
+    <%= f.input :full_amount %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :current_amount %>
+  </div>
+
+  <h2>Fill in (a Week = 7)</h2>
+  <div class="field">
+    <%= f.input :usually_expires %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :expiration_date %>
+  </div>
+
+  <h2>Leave nil</h2>
+  <div class="field">
+    <%= f.input :modified_date %>
+  </div>
+
+<h2>Nutrition</h2>
+
+  <div class="field">
+    <%= f.input :calories %>
+  </div>
+  <div class="field">
+    <%= f.input :total_fat %>
+  </div>
+  <div class="field">
+    <%= f.input :saturated_fat %>
+  </div>
+  <div class="field">
+    <%= f.input :unsaturated_fat %>
+  </div>
+  <div class="field">
+    <%= f.input :protien %>
+  </div>
+  <div class="field">
+    <%= f.input :carbohydrate %>
+  </div>
+  <div class="field">
+    <%= f.input :fiber %>
+  </div>
+  <div class="field">
+    <%= f.input :food_category %>
+  </div>
+  <div class="field">
+    <%= f.input :iron %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_a %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_b %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_b6 %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_b12 %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_c %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_d %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_e %>
+  </div>
+  <div class="field">
+    <%= f.input :vitamin_k %>
+  </div>
+  <div class="field">
+    <%= f.input :potassium %>
+  </div>
+  <div class="field">
+    <%= f.input :sodium %>
+  </div>
+  <div class="field">
+    <%= f.input :niacin %>
+  </div>
+  <div class="field">
+    <%= f.input :folate %>
+  </div>
+  <div class="field">
+    <%= f.input :zinc %>
+  </div>
+  <div class="field">
+    <%= f.input :thiamin %>
+  </div>
+  <div class="field">
+    <%= f.input :riboflavin %>
+  </div>
+  <div class="field">
+    <%= f.input :calcium %>
+  </div>
+  <div class="field">
+    <%= f.input :magnesium %>
+  </div>
+  <div class="field">
+    <%= f.input :cholesterol %>
+  </div>
+  <div class="field">
+    <%= f.input :caffeine %>
+  </div>
+  <div class="field">
+    <%= f.input :five_recipes %>
+  </div>
+  <div class="field">
+    <%= f.input :diets %>
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>

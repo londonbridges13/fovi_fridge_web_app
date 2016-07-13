@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @basic_food_items.each do |basic_food_item| %>
       <tr>
         <td><%= basic_food_item.title %></td>
+        <td><%= image_tag basic_food_item.image.url(:thumb) %></td>
         <td><%= link_to 'Show', basic_food_item %></td>
         <td><%= link_to 'Edit', edit_basic_food_item_path(basic_food_item) %></td>
         <td><%= link_to 'Destroy', basic_food_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

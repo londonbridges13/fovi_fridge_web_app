@@ -4,6 +4,144 @@
   <strong>Title:</strong>
   <%= @basic_food_item.title %>
 </p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @basic_food_item.image.url(:thumb) %>
+</p>
+<p>
+  <strong>Measurement Type:</strong>
+  <%= @basic_food_item.measurement_type %>
+</p>
+<p>
+  <strong>Full Amount:</strong>
+  <%= @basic_food_item.full_amount %>
+</p>
+<p>
+  <strong>Usually Expires:</strong>
+  <%= @basic_food_item.usually_expires %>
+</p>
+
+<h2>Nutrition</h2>
+<p>
+  <strong>Calories:</strong>
+  <%= @basic_food_item.calories %>
+</p>
+<p>
+  <strong>Total Fat:</strong>
+  <%= @basic_food_item.total_fat %>
+</p>
+<p>
+  <strong>Saturated Fat:</strong>
+  <%= @basic_food_item.saturated_fat %>
+</p>
+<p>
+  <strong>Unsaturated Fat:</strong>
+  <%= @basic_food_item.unsaturated_fat %>
+</p>
+<p>
+  <strong>Protien:</strong>
+  <%= @basic_food_item.protien %>
+</p>
+<p>
+  <strong>Carbohydrate:</strong>
+  <%= @basic_food_item.carbohydrate %>
+</p>
+<p>
+  <strong>Fiber:</strong>
+  <%= @basic_food_item.fiber %>
+</p>
+<p>
+  <strong>Food Category:</strong>
+  <%= @basic_food_item.food_category %>
+</p>
+<p>
+  <strong>Iron:</strong>
+  <%= @basic_food_item.iron %>
+</p>
+<p>
+  <strong>Vitamin A:</strong>
+  <%= @basic_food_item.vitamin_a %>
+</p>
+<p>
+  <strong>Vitamin B:</strong>
+  <%= @basic_food_item.vitamin_b %>
+</p>
+<p>
+  <strong>Vitamin B6:</strong>
+  <%= @basic_food_item.vitamin_b6 %>
+</p>
+<p>
+  <strong>Vitamin B12:</strong>
+  <%= @basic_food_item.vitamin_b12 %>
+</p>
+<p>
+  <strong>Vitamin C:</strong>
+  <%= @basic_food_item.vitamin_c %>
+</p>
+<p>
+  <strong>Vitamin D:</strong>
+  <%= @basic_food_item.vitamin_d %>
+</p>
+<p>
+  <strong>Vitamin E:</strong>
+  <%= @basic_food_item.vitamin_e %>
+</p>
+<p>
+  <strong>Vitamin K:</strong>
+  <%= @basic_food_item.vitamin_k %>
+</p>
+<p>
+  <strong>Potassium:</strong>
+  <%= @basic_food_item.potassium %>
+</p>
+<p>
+  <strong>Sodium:</strong>
+  <%= @basic_food_item.sodium %>
+</p>
+<p>
+  <strong>Niacin:</strong>
+  <%= @basic_food_item.niacin %>
+</p>
+<p>
+  <strong>Folate:</strong>
+  <%= @basic_food_item.folate %>
+</p>
+<p>
+  <strong>Zinc:</strong>
+  <%= @basic_food_item.zinc %>
+</p>
+<p>
+  <strong>Thiamin:</strong>
+  <%= @basic_food_item.thiamin %>
+</p>
+<p>
+  <strong>Riboflavin:</strong>
+  <%= @basic_food_item.riboflavin %>
+</p>
+<p>
+  <strong>Calcium:</strong>
+  <%= @basic_food_item.calcium %>
+</p>
+<p>
+  <strong>Magnesium:</strong>
+  <%= @basic_food_item.magnesium %>
+</p>
+<p>
+  <strong>Cholesterol:</strong>
+  <%= @basic_food_item.cholesterol %>
+</p>
+<p>
+  <strong>Caffeine:</strong>
+  <%= @basic_food_item.caffeine %>
+</p>
+<p>
+  <strong>Five Recipes:</strong>
+  <%= @basic_food_item.five_recipes %>
+</p>
+<p>
+  <strong>Diets:</strong>
+  <%= @basic_food_item.diets %>
+</p>
 
 <%= link_to 'Edit', edit_basic_food_item_path(@basic_food_item) %> |
 <%= link_to 'Back', basic_food_items_path %>

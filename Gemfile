@@ -31,6 +31,9 @@ gem 'cancancan', '~> 1.10'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "paperclip", "~> 5.0.0"
+gem 'simple_form'
+
 # gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
