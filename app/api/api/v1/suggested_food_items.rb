@@ -1,6 +1,7 @@
 module API
   module V1
     class SuggestedFoodItems < Grape::API
+      format :json
       resource :suggested_food_items do
         desc 'Add SuggestedFoodItems to Fovi Database'
         post do
