@@ -4,9 +4,9 @@ module API
       format :json
       resource :suggested_food_items do
         desc 'Add SuggestedFoodItems to Fovi Database'
-        get do
-          present SuggestedFoodItem.all, with: Entity::V1::SuggestedFoodItemsEntity
-        end
+        # get do
+        #   present SuggestedFoodItem.all, with: Entity::V1::SuggestedFoodItemsEntity
+        # end
         post do
           SuggestedFoodItem.create!({
                          title: params[:title],
