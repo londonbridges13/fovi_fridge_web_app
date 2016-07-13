@@ -22,7 +22,7 @@ module API
                         #  expiration_date: params[:expiration_date],
                         #  modified_date: params[:modified_date],
                          categories: params[:categories]
-                     }), with: Entity::V1::SuggestedFoodItemsEntity
+                     }) with: Entity::V1::SuggestedFoodItemsEntity
         end
       end
     end
