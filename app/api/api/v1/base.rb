@@ -9,6 +9,7 @@ module API
 
       mount V1::SuggestedFoodItems
       mount V1::BasicFoodItems
+      mount V1::Surveys
       # mount V1::SuggestedFoodItems
     end
   end
