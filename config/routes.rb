@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :surveys
   devise_for :admins
   resources :suggested_food_items
   resources :basic_food_items
