@@ -4,6 +4,9 @@
   <strong>Question:</strong>
   <%= @survey.question %>
 </p>
-
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @survey.image(:large) %>
+</p>
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>
