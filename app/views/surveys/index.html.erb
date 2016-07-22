@@ -14,6 +14,7 @@
     <% @surveys.each do |survey| %>
       <tr>
         <td><%= survey.question %></td>
+        <td><%= survey.type %></td>
         <td><%= image_tag survey.image(:large) %></td>
         <td><%= link_to 'Show', survey %></td>
         <td><%= link_to 'Edit', edit_survey_path(survey) %></td>

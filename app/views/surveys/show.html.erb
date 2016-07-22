@@ -8,5 +8,13 @@
   <strong>Image:</strong>
   <%= image_tag @survey.image(:large) %>
 </p>
+<p>
+  <strong>Type:</strong>
+  <%= @survey.type %>
+</p>
+<p>
+  <strong>Has Pre-Question:</strong>
+  <%= @survey.pre_question %>
+</p>
 <%= link_to 'Edit', edit_survey_path(@survey) %> |
 <%= link_to 'Back', surveys_path %>
