@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   resources :answers
   resources :surveys
   devise_for :admins
