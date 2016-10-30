@@ -17,7 +17,7 @@ module API
         desc 'API For Collecting New BasicFoodItems'
         post do
           @basic_food_item = BasicFoodItem.create!({
-            title: params[:title], is_basic: params[:is_basic], measurement_type: params[:measurement_type],
+            title: params[:title], measurement_type: params[:measurement_type],
               calories: params[:calories], total_fat: params[:total_fat],
               saturated_fat: params[:saturated_fat], unsaturated_fat: params[:unsaturated_fat], protien: params[:protien],
                carbohydrate: params[:carbohydrate], fiber: params[:fiber], food_category: params[:food_category],
@@ -27,6 +27,7 @@ module API
                 folate: params[:folate], zinc: params[:zinc], thiamin: params[:thiamin], riboflavin: params[:riboflavin],
                  calcium: params[:calcium], magnesium: params[:magnesium], cholesterol: params[:cholesterol], caffeine: params[:caffeine]
             })
+            @basic_food_item.is_basic = true
             @basic_food_item.is_new = true
             @basic_food_item.save!
         end
