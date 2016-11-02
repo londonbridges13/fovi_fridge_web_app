@@ -25,7 +25,7 @@ module API
                vitamin_c: params[:vitamin_c], vitamin_d: params[:vitamin_d],  vitamin_e: params[:vitamin_e],
                vitamin_k: params[:vitamin_k], potassium: params[:potassium], sodium: params[:sodium], niacin: params[:niacin],
                 folate: params[:folate], zinc: params[:zinc], thiamin: params[:thiamin], riboflavin: params[:riboflavin],
-                 calcium: params[:calcium], magnesium: params[:magnesium], cholesterol: params[:cholesterol], caffeine: params[:caffeine]
+                 calcium: params[:calcium], magnesium: params[:magnesium], cholesterol: params[:cholesterol], caffeine: params[:caffeine],
                  food_category: "Others"
             })
             @basic_food_item.is_basic = true
