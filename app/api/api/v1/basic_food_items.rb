@@ -11,7 +11,7 @@ module API
       resource :basic_food_items do
         desc 'Query All the BasicFoodItems'
         get do
-          present BasicFoodItem.order(title: :asc).where(:is_new => false), with: Entity::V1::BasicFoodItemsEntity
+          present BasicFoodItem.order(title: :asc).where(:is_new => true), with: Entity::V1::BasicFoodItemsEntity
         end
 
         desc 'API For Collecting New BasicFoodItems'
