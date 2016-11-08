@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030205929) do
+ActiveRecord::Schema.define(version: 20161108015125) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -96,6 +96,8 @@ ActiveRecord::Schema.define(version: 20161030205929) do
     t.integer  "fridge_usually_expires"
     t.boolean  "is_new"
     t.float    "measurement_number"
+    t.boolean  "tweaked"
+    t.string   "tags",                   default: "--- []\n"
   end
 
   create_table "families", force: :cascade do |t|
