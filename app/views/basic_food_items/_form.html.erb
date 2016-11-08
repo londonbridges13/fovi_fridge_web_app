@@ -16,6 +16,10 @@
     <%= f.input :title %>
   </div>
 
+  <div class="tags">
+    <%= f.input :tags %>
+  </div>
+
   <%unless @basic_food_item.image == nil%>
     <%= image_tag @basic_food_item.image.url(:thumb) %>
   <%end%>
