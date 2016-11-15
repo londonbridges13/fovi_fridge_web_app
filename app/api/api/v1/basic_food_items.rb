@@ -34,6 +34,16 @@ module API
           #   @basic_food_item.save!
         end
       end
+
+      desc 'Development'
+      resource :basic_food_items do
+        namespace 'development' do
+          get do
+            present BasicFoodItem.order(title: :asc).where(:is_new => false), with: Entity::V1::BasicFoodItemsEntity
+          end
+        end
+      end
+
     end
   end
 end

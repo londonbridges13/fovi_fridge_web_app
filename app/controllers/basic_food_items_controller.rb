@@ -70,6 +70,15 @@ class BasicFoodItemsController < ApplicationController
     end
   end
 
+
+
+  def lowercase_all_tags
+    @basic_food_item.tags.each do |t|
+      t.downcase
+      # t.save
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_basic_food_item
